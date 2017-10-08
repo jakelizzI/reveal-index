@@ -2,6 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p mdディレクトリ以下に置いたファイルが目次として表示されます。
+  p 適当に作ったので階層化されるとうまく動きません。ベタで置いてくださいｗ。
+  p CSSはExpressのデフォルトのものを使っています。適宜直してください。
+  p MDファイル内での表記は、改ページ:"\n---\n"、縦改ページ:"\n>>>\n"、カンペ:"note:"であらわされます。
+
   each file in fileList
-    p #{file}
+    h2
+      a(href='/md/#{file}') #{file}

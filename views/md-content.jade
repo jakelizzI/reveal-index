@@ -1,0 +1,12 @@
+extends reveal-layout
+
+block content
+  div.reveal
+    div.slides
+      section(
+        data-markdown='/#{title}'
+        data-separator='^\\n---\\n$'
+        data-separator-vertical='\\n>>>\\n$'
+        data-separator-notes='^note:'
+        data-charset='utf8'
+      )

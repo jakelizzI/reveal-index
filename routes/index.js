@@ -4,10 +4,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
   fs.readdir('./md/', function(err, files){
     if(err) throw err;
-    res.render('index', { title: 'Express', fileList: files});
+    res.render('index', { title: 'Slides', fileList: files});
   });
 });
 
